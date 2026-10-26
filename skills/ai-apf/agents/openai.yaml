@@ -1,0 +1,13 @@
+interface:
+  display_name: AI-APF
+  short_description: 按任务自适应澄清、形成科研问题，并选择执行方式与后续验证
+  default_prompt: 使用 $ai-apf，结合已有上下文判断这项任务需要直接处理、有限澄清还是深入形成问题，并推进当前最有价值的一步。
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  allow_implicit_invocation: true
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
