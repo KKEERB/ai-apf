@@ -1,6 +1,6 @@
 # AI-APF
 
-**发布时验证状态：macOS／Windows 跨平台 CI 尚未完成。** 本机 macOS 的脚本测试已运行；Windows 原生脚本测试及真实 Windows Codex 宿主触发仍待验证。后续结果以 [GitHub Actions](https://github.com/KKEERB/ai-apf/actions/workflows/tests.yml) 为准。
+**验证状态：macOS 和原生 Windows 的 Python 3.9／3.13 CI 已通过。** 真实 Windows Codex 宿主中的技能发现与 Plan 触发仍待验证。[查看测试运行](https://github.com/KKEERB/ai-apf/actions/runs/40429777489)。
 
 AI-APF 是一个帮助研究者和 Codex 共同澄清任务、形成科研问题并选择下一步的 skill。目标明确的任务可以直接处理；研究意图或证据条件不清楚时，它帮助辨别关注点、比较必要的选择，并保留研究者的判断权。
 
@@ -102,7 +102,7 @@ py -3 $apfScript disable --agents-file $apfAgents
 
 ## 验证与限制
 
-仓库配置了 macOS 和原生 Windows、Python 3.9 与 3.13 的 CI 矩阵；**公开发布时矩阵尚未完成**，实际结果请看仓库 Actions 的对应运行。本机 macOS 的脚本测试已经运行。Windows 原生脚本测试以及真实 Windows Codex 宿主中的技能发现与 Plan 触发仍待验证；自动化文件操作测试不能替代该宿主检查。不同 Codex 客户端和版本的行为可能不同。
+macOS 和原生 Windows、Python 3.9 与 3.13 的 [CI 矩阵](https://github.com/KKEERB/ai-apf/actions/runs/40429777489)已通过脚本测试和文档安装验证。真实 Windows Codex 宿主中的技能发现与 Plan 触发仍待验证；自动化文件操作测试不能替代该宿主检查。不同 Codex 客户端和版本的行为可能不同。
 
 科研任务中，请区分已核实事实、研究者判断、模型推断和待检验假设。脚本运行、图像或一次检查的成功不自动证明科学结论；最终研究方向与科学判断由研究者决定。
 
@@ -112,7 +112,7 @@ AI-APF is a Codex skill for adaptive task clarification and scientific problem f
 
 An optional Python helper adds a managed Plan-mode block to a selected effective `AGENTS.md` or `AGENTS.override.md`. Inspect the existing file and use `status` and `enable --dry-run` before making a change; use `disable` with the same target to remove the block. The helper does not change model or reasoning settings, install hooks, or verify host activation.
 
-At publication, the configured macOS and native Windows CI matrix has not yet completed. Local macOS script tests have run; native Windows script tests and Codex discovery and Plan activation on a real Windows host remain unverified. See the Actions link above for subsequent CI results. Scientific benefit remains to be evaluated on real research tasks.
+The macOS and native Windows CI matrix passed on Python 3.9 and 3.13, including script tests and documented installation checks. Codex skill discovery and Plan activation on a real Windows host remain unverified. See the Actions run linked above. Scientific benefit remains to be evaluated on real research tasks.
 
 ## License
 
